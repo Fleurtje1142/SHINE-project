@@ -1,0 +1,153 @@
+body {
+    display: grid;
+    grid-template-columns: auto 800px auto;
+    grid-template-rows: auto 608px auto;
+}
+
+#title {
+    grid-column-start: 2;
+    grid-row-start: 1;
+}
+
+#gameWindow {
+    width: 800px;
+    height: 608px;
+    background-color: #0022fe;
+    grid-column-start: 2;
+    grid-row-start: 2;
+    position: relative;
+}
+
+#inventoryBox {
+    width: 180px;
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0.50);
+    top: 25px;
+    left: 25px;
+    color: #000000
+}
+
+#dialogBar {
+    bottom: 0px;
+}
+
+#setMainDialog {
+    position: relative;
+    width: 800px;
+    height: 64px;
+   
+}
+
+#heroAvatar {
+    width: 72px;
+    height: 68px;
+    bottom: 0px;
+    left: 0px;
+}
+
+#heroSpeech {
+    width: 300px;
+    background-color: #FFFFFF;
+    top: 0px;
+    left: 72px;
+    opacity: 0;
+}
+
+#counterSpeech {
+    width: 300px;
+    background-color: #FFFFFF;
+    top: 0px;
+    right: 76px;
+    opacity: 0;
+}
+
+#counterAvatar {
+    width: 70px;
+    height: 63px;
+    bottom: 0px;
+    right: 9px;
+    opacity: 0;
+}
+
+#brownBar{
+    bottom: 0px;
+    height: 50px;
+    width: 800px;
+    background-color: rgba(255, 255, 255, 0.50);
+    
+}
+
+#squareTree {
+    width: 64px;
+    height: 64px;
+    background-color: #00ff00;
+    left: 400px;
+    top: 150px;
+    opacity: 1;
+    transition: all 1s ease-in-out;
+
+}
+
+#key {
+    width: 12px;
+    height: 20px;   
+    left: 195px;
+    top: 505px;
+    opacity: 1;
+    transition: all 1s ease-in-out;
+}
+
+#well {
+    width: 32px;
+    height: 25px; 
+    left: 715px;
+    top: 466px;
+}
+
+#doorWizardHut {
+    width: 32px;
+    height: 40px;
+    left: 85px;
+    top: 193px;
+}
+
+#statue {
+    width: 26px;
+    height: 24px; 
+    left: 322px;
+    top: 128px;
+}
+
+#hero {
+    top: 390px;
+    left: 267px;
+    width: 32px;
+    height: 32px;
+    transition: all 1s ease-in-out;
+}
+
+#tileMap {}
+
+.background {
+    position: absolute;
+    z-index: 0;
+}
+
+.character {
+    position: absolute;
+    z-index: 100;
+}
+
+.foreground {
+    position: absolute;
+    z-index: 1000;
+    transition: all 1s ease-in-out;
+}
+
+.speechBubble{
+    border-radius: 60px;
+    padding: 5px 5px 5px 20px;
+    user-select: none;
+    cursor: default;
+    transition: all 1s ease-in-out;
+}
