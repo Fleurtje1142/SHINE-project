@@ -1,69 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SHINE</title>
+    <link rel="stylesheet" href="CSS/style.CSS" />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Point and click adventure</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
+  <body>
     <div id="title">
-        <h1 id="mainTitle">something</h1>
+      <h1 id="mainTitle"></h1>
     </div>
     <div id="gameWindow">
-        <!--Inventory box-->
-        <div id="inventoryBox" class="foreground">
-            <ul id="inventoryList">
-            </ul>
+      <!--Inventory box-->
+      <div id="inventoryBox" class="foreground">
+        <ul id="inventoryList"></ul>
+      </div>
+      <!--dialog bar-->
+      <div id="dialogBar" class="foreground">
+        <div id="setMainDialog">
+          <div id="heroAvatar" class="foreground">
+            <img src="images/portairt girl.png" alt="hero avatar" />
+          </div>
+          <div id="heroSpeech" class="foreground speechBubble">...</div>
+          <div id="counterSpeech" class="foreground speechBubble">...</div>
+          <div id="doggieSpeech" class="foreground speechBubble">...</div>
+          <div id="counterAvatar" class="foreground">
+            <img src="images/ottermaybet1.png" alt="Counter avatar" />
+          </div>
+          <div id="doggieAvatar" class="foreground">
+            <img src="images/DogPortair.png" alt="Doggie" />
+          </div>
+          <div id="brownBar" class="background"></div>
         </div>
-        <!--dialog bar-->
-        <div id="dialogBar" class="foreground">
-            <div id="setMainDialog">
-                <div id="heroAvatar" class="foreground">
-                    <img src="images/portairt.png" alt="hero avatar">
-                </div>
-                <div id="heroSpeech" class="foreground speechBubble">
-                    ...
-                </div>
-                <div id="counterSpeech" class="foreground speechBubble">
-                    ...
-                </div>
-                <div id="counterAvatar" class="foreground">
-                    <img src="images/ottermaybet1.png" alt="Counter avatar">
-                </div>
-                <div id="brownBar" class="background"></div>
-            </div>
-        </div>
-        <!--Foreground elements-->
-        <div id="key" class="foreground"></div>
-        <div id="well" class="foreground"></div>
-        <div id="doorWizardHut" class="foreground"></div>
-        <div id="statue" class="foreground"></div>
+      </div>
+      <!--Foreground elements-->
+      <div id="key" class="foreground"></div>
+      <div id="well" class="foreground"></div>
+      <div id="doorWizardHut" class="foreground"></div>
+      <div id="statue" class="foreground"></div>
 
-        <!--Main Character-->
-        <div id="hero" class="character">
-            <img src="images/animated-character-1-idle.gif" alt="hero charcater" id="heroImage">
-        </div>
+      <img
+        id="doggie"
+        class="foreground"
+        src="images/dogsitting.gif"
+        alt="Doggie sitting"
+      />
 
-        <!--Background elements-->
-        <div id="tileMap" class="background">
-            <img src="images/map.png" alt="tilemap" draggable="false">
-        </div>
+      <!--Main Character-->
+      <div id="hero" class="character">
+        <img src="images/Girl.gif" alt="hero charcater" id="heroImage" />
+      </div>
 
+      <!--Background elements-->
+      <div id="tileMap" class="background">
+        <img src="maps/Basic_Map.png" alt="tilemap" draggable="false" />
+      </div>
+      <div id="tileMap" class="trees">
+        <img src="maps/Tree's.png" alt="treemap" draggable="false" />
+      </div>
     </div>
 
     <audio id="heroAudio">
-        <source src="audio/Gibberish - Sound Effect_01.mp3">
+      <source src="audio/294860-WALLAGroupMenTalkLite01-MS.mp3" />
     </audio>
 
     <audio id="counterAudio">
-        <source  src="audio/154989-AOS04520-Otter-Chrip-And-Grunt.mp3">
+      <source src="audio/154989-AOS04520-Otter-Chrip-And-Grunt.mp3" />
     </audio>
-    
 
-</body>
-
+    <audio id="doggieAudio">
+      <source src="audio/489435-CCC_-Golden_Retriever_Savage_Barking_06.mp3" />
+    </audio>
+  </body>
 </html>
 <script src="js/main.js"></script>

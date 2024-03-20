@@ -1,18 +1,26 @@
 body {
     display: grid;
     grid-template-columns: auto 1600px auto;
-    grid-template-rows: auto 665px auto;
+    grid-template-rows: auto 680px auto;
+    background-image: url('water_blub_blub.png');
+    background-size: cover;
+      
 }
 
 #title {
     grid-column-start: 2;
     grid-row-start: 1;
+    background-color: rgba(255, 255, 255, 0.50);
+    text-align: center;
+    font-family: monospace;
+    color: #000000;
+   
 }
 
 #gameWindow {
     width: 1600px;
-    height: 665px;
-    background-color: #0022fe;
+    height: 680px;
+    
     grid-column-start: 2;
     grid-row-start: 2;
     position: relative;
@@ -40,9 +48,9 @@ body {
 
 #heroAvatar {
     width: 72px;
-    height: 68px;
+    height: 97px;
     bottom: 0px;
-    left: 0px;
+    left: -15px;
 }
 
 #heroSpeech {
@@ -52,6 +60,7 @@ body {
     left: 72px;
     opacity: 0;
 }
+
 
 #counterSpeech {
     width: 300px;
@@ -69,10 +78,26 @@ body {
     opacity: 0;
 }
 
+#doggieAvatar{
+    width: 70px;
+    height: 63px;
+    bottom: 1px;
+    right: 9px;
+    opacity: 0;
+}
+
+#doggieSpeech{
+    width: 300px;
+    background-color: #FFFFFF;
+    top: 0px;
+    right: 76px;
+    opacity: 0;
+}
+
 #brownBar{
-    bottom: 0px;
+    bottom: 38px;
     height: 50px;
-    width: 800px;
+    width: 1600px;
     background-color: rgba(255, 255, 255, 0.50);
     
 }
@@ -91,6 +116,7 @@ body {
 #key {
     width: 12px;
     height: 20px;   
+    background-color: black;
     left: 195px;
     top: 505px;
     opacity: 1;
@@ -100,6 +126,7 @@ body {
 #well {
     width: 32px;
     height: 25px; 
+    background-color: blue;
     left: 715px;
     top: 466px;
 }
@@ -107,20 +134,32 @@ body {
 #doorWizardHut {
     width: 32px;
     height: 40px;
+    background-color: aqua;
     left: 85px;
     top: 193px;
 }
 
 #statue {
     width: 26px;
-    height: 24px; 
+    height: 24px;
+    background-color: red; 
     left: 322px;
     top: 128px;
+}
+
+#doggie{
+    width: 33px;
+    height: 32px;
+    background-color: purple; 
+    left: 670px;
+    top: 443px;
+    opacity: 1;
 }
 
 #hero {
     top: 390px;
     left: 267px;
+    background-color: pink;
     width: 32px;
     height: 32px;
     transition: all 1s ease-in-out;
@@ -136,6 +175,12 @@ body {
 .character {
     position: absolute;
     z-index: 100;
+}
+
+.trees {
+    position: absolute;
+    z-index: 500;
+    transition: all 1s ease-in-out;
 }
 
 .foreground {
