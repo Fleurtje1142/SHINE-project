@@ -2,8 +2,7 @@ body {
     display: grid;
     grid-template-columns: auto 1600px auto;
     grid-template-rows: auto 680px auto;
-    background-image: url('water_blub_blub.png');
-    background-size: cover;
+    
       
 }
 
@@ -20,7 +19,6 @@ body {
 #gameWindow {
     width: 1600px;
     height: 680px;
-    
     grid-column-start: 2;
     grid-row-start: 2;
     position: relative;
@@ -47,43 +45,43 @@ body {
 }
 
 #heroAvatar {
-    width: 72px;
-    height: 135px;
-    bottom: 0px;
-    left: -15px;
+    width: 16px;
+    height: 16px;
+    bottom: 105px;
+    left: -3px;
 }
 
 #heroSpeech {
     width: 300px;
     background-color: #FFFFFF;
-    top: 0px;
+    top: -9px;
     left: 72px;
-    opacity: 0;
+    opacity: 1;
 }
 
 
 #counterSpeech {
     width: 300px;
     background-color: #FFFFFF;
-    top: 0px;
-    right: 76px;
-    opacity: 0;
+    top: -9px;
+    right: -700px;
+    opacity: 1;
 }
 
 #counterAvatar {
     width: 70px;
     height: 63px;
-    bottom: 10px;
+    bottom: 45px;
     right: -790px;
-    opacity: 1;
+    opacity: 0;
 }
 
 #doggieAvatar{
     width: 70px;
     height: 110px;
-    bottom: 1px;
+    bottom: 2px;
     right: -795px;
-    opacity: 0;
+    opacity: 1;
 }
 
 #doggieSpeech{
