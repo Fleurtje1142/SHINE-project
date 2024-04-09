@@ -4,6 +4,7 @@ let gameState = {
   inventory: [],
   coinPickedUp: false,
   keyPickedUp: false,
+  fishingrodPickedUp: false,
 };
 
 //localStorage.removeItem("gameState");
@@ -179,14 +180,19 @@ gameWindow.onclick = function (e) {
           showMessage,
           16 * sec,
           heroSpeech,
-          "Oke bye bye now",
+          "o Thank you for the fishing rod!",
           heroAudio
         );
         setTimeout(function () {
           doggieAvatar.style.opacity = 0;
           doggie.style.opacity = 0;
         }, 20 * sec);
-        //console.log("hey you.. wanna know where the key is? It's by the graves.");
+
+        console.log("You got a Fishin grod");
+        document.getElementById("Fishing rod").remove();
+        changeInventory("Fishing rod", "add");
+        gameState.fishingrodPickedUp = true;
+        saveGamestate(gameState);
         break;
       default:
         break;
