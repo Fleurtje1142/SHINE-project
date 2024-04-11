@@ -30,12 +30,14 @@ const mainCharacter = document.getElementById("hero");
 const offsetCharacter = 16;
 const doggie = document.getElementById("doggie");
 const frog = document.getElementById("frog");
+const panda = document.getElementById("panda");
 
 //speech bubbles
 const heroSpeech = document.getElementById("heroSpeech");
 const counsterSpeech = document.getElementById("counterSpeech");
 const doggieSpeech = document.getElementById("doggieSpeech");
 const froggieSpeech = document.getElementById("froggieSpeech");
+const pandaSpeech = document.getElementById("pandaSpeech");
 //audio for dialog
 const heroAudio = document.getElementById("heroAudio");
 const counterAudio = document.getElementById("counterAudio");
@@ -45,6 +47,7 @@ const doggieAudio = document.getElementById("doggieAudio");
 const counterAvatar = document.getElementById("counterAvatar");
 const doggieAvatar = document.getElementById("doggieAvatar");
 const froggieAvatar = document.getElementById("froggieAvatar");
+const pandaAvatar = document.getElementById("pandaAvatar");
 
 //Objects
 const tree1 = document.getElementById("squareTree");
@@ -82,41 +85,16 @@ gameWindow.onclick = function (e) {
       mainCharacter.style.top = y - offsetCharacter + "px";
     }
     switch (e.target.id) {
-      case "key":
-        console.log("pick up key");
-        document.getElementById("key").remove();
-        changeInventory("key", "add");
-        gameState.keyPickedUp = true;
-        saveGamestate(gameState);
-        break;
       case "well":
         if (gameState.coinPickedUp == false) {
           changeInventory("coin", "add");
           gameState.coinPickedUp = true;
         }
-
-        showMessage(heroSpeech, "You picked up the coin!!", heroAudio);
-        break;
-      case "doorWizardHut":
-        if (checkItem("key")) {
-          showMessage(heroSpeech, "I opened the door. Yeah!", heroAudio);
-          //console.log("I opened the door. Yeah!");
-        } else if (checkItem("coin")) {
-          changeInventory("coin", "remove");
-          showMessage(
-            heroSpeech,
-            "Oh no I lost the coin and it didn't open the door.. Feel kinda stupid..",
-            heroAudio
-          );
-          //console.log("Oh no I lost the coin and it didn't open the door.. Feel kinda stupid..");
-        } else {
-          showMessage(
-            heroSpeech,
-            "Fuck this door is locked and I don't have a key. boohoo :(",
-            heroAudio
-          );
-          //console.log("Fuck this door is locked and I don't have a key. boohoo :(");
-        }
+        showMessage(
+          heroSpeech,
+          "Mr. frog is very happy you found it. You can keep the coin.",
+          heroAudio
+        );
         break;
       case "statue":
         showMessage(
@@ -242,6 +220,49 @@ gameWindow.onclick = function (e) {
         setTimeout(function () {
           froggieAvatar.style.opacity = 0;
           frog.style.opacity = 0;
+        }, 20 * sec);
+        break;
+
+      case "panda":
+        showMessage(
+          heroSpeech,
+          "Hello mr. Panda, is there a table for me to eat?",
+          heroAudio
+        );
+        setTimeout(function () {
+          pandaAvatar.style.opacity = 1;
+        }, 4 * sec);
+        setTimeout(
+          showMessage,
+          4.1 * sec,
+          pandaSpeech,
+          "Hello! I don't have a table now sorry",
+          heroAudio
+        );
+        setTimeout(
+          showMessage,
+          8.1 * sec,
+          heroSpeech,
+          "O so how long do I have to wait?",
+          heroAudio
+        );
+        setTimeout(
+          showMessage,
+          12 * sec,
+          pandaSpeech,
+          "I don't know how long you have to wait. You can better come back later.",
+          heroAudio
+        );
+        setTimeout(
+          showMessage,
+          16 * sec,
+          heroSpeech,
+          "Okay I will do that than see you later!",
+          heroAudio
+        );
+        setTimeout(function () {
+          pandaAvatar.style.opacity = 0;
+          panda.style.opacity = 0;
         }, 20 * sec);
         break;
       default:

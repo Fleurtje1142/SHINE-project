@@ -52,7 +52,7 @@ body {
 }
 
 #heroSpeech {
-    width: 300px;
+    width: 500px;
     background-color: #FFFFFF;
     top: -14px;
     left: 72px;
@@ -61,9 +61,9 @@ body {
 
 
 #counterSpeech {
-    width: 300px;
+    width: 600px;
     background-color: #FFFFFF;
-    top: -14px;
+    top: -22px;
     right: -700px;
     opacity: 0;
 }
@@ -71,8 +71,8 @@ body {
 #counterAvatar {
     width: 70px;
     height: 63px;
-    bottom: 76px;
-    right: -757px;
+    bottom: 70px;
+    right: -767px;
     opacity: 0;
 }
 
@@ -85,7 +85,7 @@ body {
 }
 
 #doggieSpeech{
-    width: 300px;
+    width: 500px;
     background-color: #FFFFFF;
     top: -14px;
     right: -700px;
@@ -101,7 +101,23 @@ body {
 }
 
 #froggieSpeech{
-    width: 300px;
+    width: 500px;
+    background-color: #FFFFFF;
+    top: -14px;
+    right: -700px;
+    opacity: 0;
+}
+
+#pandaAvatar {
+    width: 70px;
+    height: 63px;
+    bottom: 65px;
+    right: -773px;
+    opacity: 0;
+}
+
+#pandaSpeech{
+    width: 500px;
     background-color: #FFFFFF;
     top: -14px;
     right: -700px;
@@ -119,7 +135,6 @@ body {
 #squareTree {
     width: 64px;
     height: 64px;
-    background-color: #00ff00;
     left: 400px;
     top: 150px;
     opacity: 1;
@@ -127,36 +142,23 @@ body {
 
 }
 
-#key {
-    width: 12px;
-    height: 20px;   
-    background-color: black;
-    left: 195px;
-    top: 505px;
-    opacity: 1;
-    transition: all 1s ease-in-out;
-}
-
 #well {
     width: 16px;
     height: 10px; 
-    background-color: blue;
     right: 174px;
     top: 468px;
 }
 
-#doorWizardHut {
-    width: 32px;
-    height: 40px;
-    background-color: aqua;
-    left: 85px;
-    top: 193px;
+#panda{
+    width: 18px;
+    height: 15px; 
+    right: 165px;
+    top: 310px;
 }
 
 #statue {
     width: 26px;
-    height: 24px;
-    background-color: red; 
+    height: 24px; 
     right: 368px;
     top: 357px;
 }
@@ -164,7 +166,6 @@ body {
 #doggie{
     width: 10px;
     height: 16px;
-    background-color: purple; 
     left: 675px;
     top: 445px;
     opacity: 1;
@@ -173,7 +174,6 @@ body {
 #frog {
     width: 16px;
     height: 16px; 
-    background-color: #00ff00;
     right: 207px;
     top: 545px;
 }
@@ -188,7 +188,6 @@ body {
 #hero {
     top: 74px;
     left: 281px;
-    
     width: 16px;
     height: 16px;
     transition: all 1s ease-in-out;
