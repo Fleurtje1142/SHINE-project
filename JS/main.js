@@ -29,11 +29,13 @@ const sec = 1000;
 const mainCharacter = document.getElementById("hero");
 const offsetCharacter = 16;
 const doggie = document.getElementById("doggie");
+const frog = document.getElementById("frog");
 
 //speech bubbles
 const heroSpeech = document.getElementById("heroSpeech");
 const counsterSpeech = document.getElementById("counterSpeech");
 const doggieSpeech = document.getElementById("doggieSpeech");
+const froggieSpeech = document.getElementById("froggieSpeech");
 //audio for dialog
 const heroAudio = document.getElementById("heroAudio");
 const counterAudio = document.getElementById("counterAudio");
@@ -42,6 +44,7 @@ const doggieAudio = document.getElementById("doggieAudio");
 //avatar
 const counterAvatar = document.getElementById("counterAvatar");
 const doggieAvatar = document.getElementById("doggieAvatar");
+const froggieAvatar = document.getElementById("froggieAvatar");
 
 //Objects
 const tree1 = document.getElementById("squareTree");
@@ -71,7 +74,8 @@ gameWindow.onclick = function (e) {
   if (
     counterSpeech.style.opacity == 0 &&
     doggieSpeech.style.opacity == 0 &&
-    heroSpeech.style.opacity == 0
+    heroSpeech.style.opacity == 0 &&
+    froggieSpeech.style.opacity == 0
   ) {
     if (e.target.id !== "heroImage") {
       mainCharacter.style.left = x - offsetCharacter + "px";
@@ -89,9 +93,9 @@ gameWindow.onclick = function (e) {
         if (gameState.coinPickedUp == false) {
           changeInventory("coin", "add");
           gameState.coinPickedUp = true;
-        } else {
-          console.log("There are no more coins in this well!");
         }
+
+        showMessage(heroSpeech, "You picked up the coin!!", heroAudio);
         break;
       case "doorWizardHut":
         if (checkItem("key")) {
@@ -117,7 +121,7 @@ gameWindow.onclick = function (e) {
       case "statue":
         showMessage(
           heroSpeech,
-          "Hey a otter in the water... Cute little otter.",
+          "Hello mr. Fox. What can I do here?",
           heroAudio
         );
         setTimeout(function () {
@@ -127,22 +131,29 @@ gameWindow.onclick = function (e) {
           showMessage,
           4.1 * sec,
           counsterSpeech,
-          "I can talk you know.. My name is Otto the otter",
+          "Hello you can talk to me. At the moment I have sold everything so I dont have anyting for you.",
           counterAudio
         );
         setTimeout(
           showMessage,
           8.1 * sec,
           heroSpeech,
-          "Wait what? That's not normal. Hello Otto",
+          "Oh that's a bummer. When do you get new stuff?",
           heroAudio
         );
         setTimeout(
           showMessage,
           15 * sec,
           counsterSpeech,
-          "Just shut up... I don't want to be friends. I have a hint for you to find the key... Check the park.",
+          "I don't know but I will call you when I have new stuff.",
           counterAudio
+        );
+        setTimeout(
+          showMessage,
+          8.1 * sec,
+          heroSpeech,
+          "Thank you very much I will wait for your call. See you later!",
+          heroAudio
         );
         setTimeout(function () {
           counterAvatar.style.opacity = 0;
@@ -193,6 +204,45 @@ gameWindow.onclick = function (e) {
         changeInventory("Fishing rod", "add");
         gameState.fishingrodPickedUp = true;
         saveGamestate(gameState);
+        break;
+
+      case "frog":
+        showMessage(heroSpeech, "Hello mr. Frog", heroAudio);
+        setTimeout(function () {
+          froggieAvatar.style.opacity = 1;
+        }, 4 * sec);
+        setTimeout(
+          showMessage,
+          4.1 * sec,
+          froggieSpeech,
+          "Hello! Can you help me?",
+          heroAudio
+        );
+        setTimeout(
+          showMessage,
+          8.1 * sec,
+          heroSpeech,
+          "Of course I can help you. Where can I help you with?",
+          heroAudio
+        );
+        setTimeout(
+          showMessage,
+          12 * sec,
+          froggieSpeech,
+          "I have lost a coin in my house can you find it for me?",
+          heroAudio
+        );
+        setTimeout(
+          showMessage,
+          16 * sec,
+          heroSpeech,
+          "Of course I can! I will try and find the coin in you house",
+          heroAudio
+        );
+        setTimeout(function () {
+          froggieAvatar.style.opacity = 0;
+          frog.style.opacity = 0;
+        }, 20 * sec);
         break;
       default:
         break;

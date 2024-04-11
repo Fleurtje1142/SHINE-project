@@ -54,25 +54,25 @@ body {
 #heroSpeech {
     width: 300px;
     background-color: #FFFFFF;
-    top: -9px;
+    top: -14px;
     left: 72px;
-    opacity: 1;
+    opacity: 0;
 }
 
 
 #counterSpeech {
     width: 300px;
     background-color: #FFFFFF;
-    top: -9px;
+    top: -14px;
     right: -700px;
-    opacity: 1;
+    opacity: 0;
 }
 
 #counterAvatar {
     width: 70px;
     height: 63px;
-    bottom: 45px;
-    right: -790px;
+    bottom: 76px;
+    right: -757px;
     opacity: 0;
 }
 
@@ -81,15 +81,31 @@ body {
     height: 110px;
     bottom: 2px;
     right: -795px;
-    opacity: 1;
+    opacity: 0;
 }
 
 #doggieSpeech{
     width: 300px;
     background-color: #FFFFFF;
-    top: -9px;
+    top: -14px;
     right: -700px;
-    opacity: 1;
+    opacity: 0;
+}
+
+#froggieAvatar {
+    width: 70px;
+    height: 63px;
+    bottom: 47px;
+    right: -791px;
+    opacity: 0;
+}
+
+#froggieSpeech{
+    width: 300px;
+    background-color: #FFFFFF;
+    top: -14px;
+    right: -700px;
+    opacity: 0;
 }
 
 #brownBar{
@@ -122,11 +138,11 @@ body {
 }
 
 #well {
-    width: 32px;
-    height: 25px; 
+    width: 16px;
+    height: 10px; 
     background-color: blue;
-    left: 715px;
-    top: 466px;
+    right: 174px;
+    top: 468px;
 }
 
 #doorWizardHut {
@@ -141,8 +157,8 @@ body {
     width: 26px;
     height: 24px;
     background-color: red; 
-    left: 322px;
-    top: 128px;
+    right: 368px;
+    top: 357px;
 }
 
 #doggie{
@@ -152,6 +168,21 @@ body {
     left: 675px;
     top: 445px;
     opacity: 1;
+}
+
+#frog {
+    width: 16px;
+    height: 16px; 
+    background-color: #00ff00;
+    right: 207px;
+    top: 545px;
+}
+
+#chicken{
+    width: 34px;
+    height: 34px;
+    left: 643px;
+    top: 253px;
 }
 
 #hero {
